@@ -17,10 +17,6 @@ var isPalindrome = function(x) {
         num.push(temp);
     }
     for (var i = 0, j = num.length - 1; i < num.length / 2; i++, j--) {
-        console.log(i)
-        console.log(j)
-        console.log("i:" + num[i]);
-        console.log("j:" + num[j]);
         if (num[i] != num[j]) {
             flag = false;
             break;
