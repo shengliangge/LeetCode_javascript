@@ -8,7 +8,7 @@ var reverse = function(x) {
     var reverse_x = "";
     var flag = false;
     for (var i = s.length - 1; i >= 0; i--) {
-        if (s.charAt(i) === '-') {
+        if (s[i] === '-') {
             flag = true;
             break;
         }
@@ -23,6 +23,6 @@ var reverse = function(x) {
     }
     return reverse_x;
 };
-var x = 1534236469;
+var x = -15342364;
 console.log('结果' + reverse(x));
 // console.log(typeof reverse(x));
