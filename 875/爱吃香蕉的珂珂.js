@@ -5,7 +5,6 @@
  */
 //暴力破解法 再优化
 var minEatingSpeed = function (piles, H) {
-
   let lo = 1; //最小的数
   let hi = Math.max(...piles)  //求最大香蕉数
   if(piles.length==H){ //如果香蕉堆数量等于时间，则返回最大香蕉数
