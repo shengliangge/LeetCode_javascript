@@ -26,9 +26,7 @@ var sumZero = function (n) {
     }
     arr.push(0)
   }
-
   return arr
-
 };
 
 console.log(sumZero(4));
