@@ -6,7 +6,8 @@
  * @return {boolean}
  */
 var isPalindrome = function (s) {
-  s = s.replace(/[^0-9a-zA-Z]/g, '').toLowerCase()
+  s = s.toLowerCase().replace(/[^0-9a-z]/g, '')
+  console.log(s);
   let i = 0, j = s.length - 1;
   while (i < j) {
     if (s[i] === s[j]) {
@@ -14,7 +15,7 @@ var isPalindrome = function (s) {
       j--
     } else return false
   }
-  return true
+  return true 
 };
 console.log(isPalindrome("A man, a plan, a canal: Panama"));
 
