@@ -20,7 +20,7 @@
  */
 function ListNode(val) {
   this.val = val;
-  this.next = null;
+  this .next = null;
 }
 
 var addTwoNumbers = function (l1, l2) {
