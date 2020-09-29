@@ -22,8 +22,41 @@ function ListNode(val) {
   this.val = val;
   this.next = null;
 }
+
 var addTwoNumbers = function (l1, l2) {
-  let list = new ListNode('head')
-  console.log(list.val);
+  let list = new ListNode('head')  //创建一个新的链表，头指针
+  let temp = list
+  let add = 0  //是否进位
+  let sum = 0 //和
+  while (l1 || l2) { //按最长的循环
+    sum = (l1 ? l1.val : 0) + (l2 ? l2.val : 0) + add
+    temp.next = new ListNode(sum % 10)
+    temp = temp.next
+    add = sum >= 10 ? 1 : 0
+    l1 && (l1 = l1.next)
+    l2 && (l2 = l2.next)
+  }
+  add && (temp.next = new ListNode(add))
+  return list.next
 };
-addTwoNumbers()
+
+// var addTwoNumbers = function(l1, l2) {
+//   let node = new ListNode('head');
+//   let temp = node;//哑结点
+//   let add = 0;//是否进一
+//   let sum = 0;//新链表当前未取余的值 = 链表1值 + 链表2值 + add;
+
+//   //遍历，直到最长的都为空
+//   while(l1 || l2){
+//       sum = (l1 ? l1.val : 0) + (l2 ? l2.val : 0) + add;
+//       temp.next = new ListNode(sum % 10);//取余则为新链表的值
+//       temp = temp.next;
+//       add = sum >= 10 ? 1 : 0;
+//       l1 && (l1 = l1.next);
+//       l2 && (l2 = l2.next);
+//   }
+//   add && (temp.next = new ListNode(add));
+//   return node.next;
+// };
+
+
