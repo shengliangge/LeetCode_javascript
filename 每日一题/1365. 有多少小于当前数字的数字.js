@@ -21,8 +21,6 @@ var smallerNumbersThanCurrent = function (nums) {
     res.push(k)
     k = 0
   }
-
   return res
-
 };
 console.log(smallerNumbersThanCurrent(nums = [6,5,4,8]))
