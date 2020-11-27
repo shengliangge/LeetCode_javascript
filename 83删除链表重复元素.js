@@ -15,7 +15,7 @@ var deleteDuplicates = function (head) {
       if (temp.val == temp.next.val) {
           temp.next = temp.next.next
       } else {
-          temp = temp.next
+          temp = temp.next //指向下一个
       }
   }
   return head
